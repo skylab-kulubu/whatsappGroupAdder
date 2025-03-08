@@ -59,7 +59,7 @@ try:
     group_name_box = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, "//div[@title='Grup Konusu (İsteğe Bağlı)']"))
     )
-    group_name_box.send_keys("SKY LAB: Duyuru 2 vs...")
+    group_name_box.send_keys("SKY LAB: Duyuru 2 vs...")#buraya giriyorsun grup ismini üst tarafa değil
 except:
     print("Grup adı girilemedi!")
 
@@ -70,6 +70,7 @@ try:
     )
     create_group_button.click()
     print("Grup başarıyla oluşturuldu!")
+    time.sleep(100)
 except:
     print("Grup oluşturma butonu bulunamadı!")
 
